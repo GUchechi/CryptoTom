@@ -1,31 +1,17 @@
-.coin-stats-name{
+}
+
+.coin-details-heading{
+    font-weight: 700 !important;
+    margin-top: 20px !important;
+    color: var(--pink) !important;
+}
+
+.coin-stats{
     display: flex;
-    gap: 10px;
-    font-size: 1rem;
-}
-
-.stats{
-    font-weight: 800;
-}
-
-.coin-value-statistics-heading p{
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
     font-size: 1rem;
     opacity: 0.9;
-}
+    padding: 20px;
 
-.coin-desc-link{
-    display: flex;
-    gap: 40px;
-    margin-top: 40px;
-    padding-top: 20px;
-}
-
-.coin-desc-link h2{
-    font-weight: 700;
-    color: var(--pink);
-}
-
-.coin-desc-link p{
-    font-size: 1rem;
-    opacity: 0.9;
 }
