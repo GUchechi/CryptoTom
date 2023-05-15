@@ -1,9 +1,9 @@
-
-
 function App() {
   return (
-    <div >
-      Hey
+    <div className="app">
+      <div className="navbar"></div>
+      <div className="main"></div>
+      <div className="footer"></div>
     </div>
   );
 }
