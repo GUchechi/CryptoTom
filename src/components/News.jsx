@@ -12,10 +12,29 @@ const News = ({ simplified }) => {
     count: simplified ? 6 : 12,
   });
 
-  console.log(cryptoNews);
-  // if (!cryptoNews?.value) return "Loading...";
+  if (!cryptoNews?.value) return "Loading...";
 
-  return <div>News</div>;
+  return (
+    <Row gutter={[24, 24]}>
+      {cryptoNews.map((news, i) => (
+        <Col xs={24} sm={12} lg={8} key={i}>
+          <Card hoverable className="news-card">
+            <a href={news.url} target="_blank" rel="noreferrer">
+              <div className="news-image-container">
+                <Title className="news-title" level={4}>
+                  {news.name}
+                </Title>
+                <img
+                  src={news?.image?.thumbnail?.contentUrl || demoImage}
+                  alt=""
+                />
+              </div>
+            </a>
+          </Card>
+        </Col>
+      ))}
+    </Row>
+  );
 };
 
 export default News;
