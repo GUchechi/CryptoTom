@@ -1,28 +1,16 @@
-.coin-heading-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-bottom: 1px solid var(--border);
-    padding-top: 20px;
-    padding-bottom: 20px;
-    gap: 10px;
+
+.ant-menu{
+    position: absolute;
+    right: 0px;
+}
+.home-title{
+    font-size: 1.4rem !important;
+}
+.show-more{
+    font-size: 1.3rem !important;
+}
 }
 
-.coin-heading-container .coin-name{
-    font-weight: 900;
-    color: var(--pink);
-}
-
-.coin-heading-container p{
-    font-size: 1rem;
-    opacity: 0.9;
-    margin-bottom: 20px;
-}
-
-.stats-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
+.coin-detail-container{
+margin: 30px;
 }
