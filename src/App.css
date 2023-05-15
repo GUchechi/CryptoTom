@@ -1,17 +1,28 @@
-.current-price{
-    margin-top: 0px !important;
-    font-weight: 900 !important;
+@media screen and (max-width:1000px){
+    .stats-container{
+        flex-direction: column;
+    }
+    .coin-desc-link{
+        flex-direction: column;
+    }
+    .stats-container h2{
+        margin-top: 0px;
+    }
 }
-.home-heading-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 40px;
+
+@media screen and (max-width: 500px){
+    .coin-links{
+        padding: 0px;
+    }
+    .coin-detail-container{
+        margin: 0;
+    }
 }
-.show-more{
-    margin-top: 0px !important;
+@media screen and (max-width: 500px){
+    .heading{
+        margin-top: 20px;
+    }
 }
-.exchange-image{
-    margin: 0px 10px !important;
-}
-.search-crypto{
+
+.select-news{
+    width: 180px;
