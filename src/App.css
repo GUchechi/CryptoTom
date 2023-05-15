@@ -1,16 +1,31 @@
-
-.ant-menu{
-    position: absolute;
-    right: 0px;
-}
-.home-title{
-    font-size: 1.4rem !important;
-}
 .show-more{
-    font-size: 1.3rem !important;
+    margin-top: 0px !important;
 }
+.exchange-image{
+    margin: 0px 10px !important;
+}
+.search-crypto{
+    margin: 20px auto 30px auto;
+    width: 250px;
+}
+.crypto-card-container{
+    min-height: 65vh !important;
+}
+.crypto-card{
+    min-width: 250px;
+}
+.crypto-card .crypto-image{
+    width:35px;
+}
+.select-timeperiod{
+    width: 200px !important;
+    margin-top: 20px !important;
 }
 
-.coin-detail-container{
-margin: 30px;
+.footer {
+    background-color: #001529;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
 }
