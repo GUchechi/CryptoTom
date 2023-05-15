@@ -89,3 +89,27 @@
         margin-top: 20px;
     }
 }
+
+.coin-links{
+    padding: 0px 20px;
+      flex: 0.5;
+  }
+  
+  .coin-link{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      padding: 20px;
+  }
+  
+  .link-name{
+      text-transform: capitalize;
+      font-size: 1rem;
+  }
+  
+  .coin-link a{
+      color: var(--pink);
+      font-weight: 700;
+      font-size: 1rem;
+  }
