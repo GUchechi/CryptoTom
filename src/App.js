@@ -8,7 +8,13 @@ function App() {
       <div className="navbar">
         <Navbar />
       </div>
-      <div className="main"></div>
+      <div className="main">
+        <Layout>
+          <div className="routes">
+            
+          </div>
+        </Layout>
+      </div>
       <div className="footer"></div>
     </div>
   );
