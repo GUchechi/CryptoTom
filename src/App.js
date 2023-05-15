@@ -1,5 +1,4 @@
 import { Routes, Route, Link } from "react-router-dom";
-// import 'antd/dist/reset.css';
 import { Layout, Typography, Space } from "antd";
 import {
   Navbar,
