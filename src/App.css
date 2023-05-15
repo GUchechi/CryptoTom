@@ -43,4 +43,19 @@
     justify-content: space-between;
     gap: 50px;
     color: #0071bd;
+
+    .select-news{
+        width: 180px;
+    }
+    .news-card{
+        min-height: 300px !important;
+    }
+    .news-image-container{
+        display: flex !important;
+        justify-content: space-between !important;
+    }
+    .news-title{
+    width: 70%;
+    }
+    
 }
