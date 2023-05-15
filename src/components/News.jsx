@@ -10,15 +10,36 @@ const { Text, Title } = Typography;
 const { Option } = Select;
 
 const News = ({ simplified }) => {
+  const [newsCategory, setNewsCategory] = useState("CryptoCurrency");
   const { data: cryptoNews } = useGetCryptoNewsQuery({
-    newsCategory: "CryptoCurrency",
+    newsCategory,
     count: simplified ? 6 : 12,
   });
+  const { data } = useGetCryptoNewsQuery(100);
 
   if (!cryptoNews?.value) return "Loading...";
 
   return (
     <Row gutter={[24, 24]}>
+      {!simplified && (
+        <Col span={24}>
+          <Select
+            showSearch
+            className="select-news"
+            placeholder="Select a Crypto"
+            optionFilterProp="children"
+            onChange={(value) => setNewsCategory(value)}
+            filterOption={(input, option) =>
+              option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+            }
+          >
+            <Option value="Cryptocurency">Cryptocurrency</Option>
+            {data?.data?.coins?.map((currency) => (
+              <Option value={currency.name}>{currency.name}</Option>
+            ))}
+          </Select>
+        </Col>
+      )}
       {cryptoNews?.value.map((news, i) => (
         <Col xs={24} sm={12} lg={8} key={i}>
           <Card hoverable className="news-card">
@@ -39,10 +60,20 @@ const News = ({ simplified }) => {
               </p>
               <div className="provider-container">
                 <div>
-                  <Avatar src={news.provider[0]?.image?.thumbnail?.contentUrl || demoImage} alt="" />
-                  <Text className="provider-name">{news.provider[0]?.name}</Text>
+                  <Avatar
+                    src={
+                      news.provider[0]?.image?.thumbnail?.contentUrl ||
+                      demoImage
+                    }
+                    alt=""
+                  />
+                  <Text className="provider-name">
+                    {news.provider[0]?.name}
+                  </Text>
                 </div>
-                <Text>{moment(news.datePublished).startOf('ss').fromNow()}</Text>
+                <Text>
+                  {moment(news.datePublished).startOf("ss").fromNow()}
+                </Text>
               </div>
             </a>
           </Card>
