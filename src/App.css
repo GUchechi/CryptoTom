@@ -73,27 +73,3 @@ overflow: hidden;
     flex: 0.5;
 }
 
-auto;
-    width: 250px;
-}
-.crypto-card-container{
-    min-height: 65vh !important;
-}
-.crypto-card{
-    min-width: 250px;
-}
-.crypto-card .crypto-image{
-    width:35px;
-}
-.select-timeperiod{
-    width: 200px !important;
-    margin-top: 20px !important;
-}
-
-.footer {
-    background-color: #001529;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    align-items: center;
-}
