@@ -18,8 +18,8 @@ import {
   useGetCryptoDetailsQuery,
   useGetCryptoHistoryQuery,
 } from "../services/CryptoApi";
+import Loader from "./Loader";
 // import LineChart from "./LineChart";
-
 
 const { Title, Text } = Typography;
 const { Option } = Select;
@@ -28,7 +28,10 @@ const CryptoDetails = () => {
   const [timePeriod, setTimePeriod] = useState("7d");
   const { coinId } = useParams();
   const { data, isFetching } = useGetCryptoDetailsQuery(coinId);
-  const { data: coinHistory } = useGetCryptoHistoryQuery({coinId, timePeriod});
+  const { data: coinHistory } = useGetCryptoHistoryQuery({
+    coinId,
+    timePeriod,
+  });
 
   const cryptoDetails = data?.data?.coin;
 
@@ -36,7 +39,7 @@ const CryptoDetails = () => {
     return null; // or show an error message
   }
 
-  if (isFetching) return "Loading...";
+  if (isFetching) return <Loader />;
 
   const time = ["3h", "24h", "7d", "30d", "1y", "3m", "3y", "5y"];
 
