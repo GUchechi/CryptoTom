@@ -1,6 +1,9 @@
 import { Line } from "react-chartjs-2";
 import { Col, Row, Typography } from "antd";
 
+const { Title } = Typography;
+
+
 const LineChart = ({ coinHistory, currentPrice, coinName }) => {
   return (
     <>
@@ -17,7 +20,7 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
           </Title>
         </Col>
       </Row>
-      <Line data={data} options={options} />
+      {/* <Line data={data} options={options} /> */}
     </>
   );
 };
