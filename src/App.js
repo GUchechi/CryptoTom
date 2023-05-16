@@ -23,7 +23,7 @@ function App() {
               <Route index path="/" element={<HomePage />} />
               <Route path="/exchanges" element={<Exchanges />} />
               <Route path="/cryptoCurrencies" element={<CryptoCurrencies />} />
-              <Route path="/crypto/:coinId"  element={<CryptoDetails />} />
+              <Route path="/crypto/:coinId" element={<CryptoDetails />} />
               <Route path="/news" element={<News />} />
             </Routes>
           </div>
@@ -31,7 +31,7 @@ function App() {
 
         <div className="footer">
           <Typography.Title
-            level={5} 
+            level={5}
             style={{ color: "white", textAlign: "center" }}
           >
             Copyright © 2021
