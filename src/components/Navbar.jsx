@@ -8,8 +8,13 @@ import {
   MenuOutlined,
 } from "@ant-design/icons";
 import icon from "../images/cryptocurrency.png";
+import { useState, useEffect } from "react";
 
 const Navbar = () => {
+  const [activeMenu, setActiveMenu] = useState(true);
+  const [screenSize, setScreenSize] = useState(undefined);
+
+
   return (
     <div className="nav-container">
       <div className="logo-container">
