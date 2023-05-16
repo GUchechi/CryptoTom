@@ -23,6 +23,7 @@ const CryptoDetails = () => {
   const { coinId } = useParams();
 
   const { data, isFetching } = useGetCryptoDetailsQuery(coinId);
+  
 
   const cryptoDetails = data?.data?.coin;
 
