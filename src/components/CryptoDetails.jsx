@@ -135,7 +135,7 @@ const CryptoDetails = () => {
               <Text className="stats">{value}</Text>
             </Col>
           ))}
-        </Col>
+        
       </Col>
       <Col className="other-stats-info">
         <Col className="coin-value-statistics-heading">
@@ -157,6 +157,8 @@ const CryptoDetails = () => {
           </Col>
         ))}
       </Col>
+      </Col>
+      
     </Col>
   );
 };
