@@ -19,10 +19,8 @@ const { Title, Text } = Typography;
 const { Option } = Select;
 
 const CryptoDetails = () => {
-  const [timeperiod, setTimeperiod] = useState('7d');
-const {coinId} = useParams()
-
-
+  const [timeperiod, setTimeperiod] = useState("7d");
+  const { coinId } = useParams();
 
   return <div>CryptoDetails {coinId}</div>;
 };
