@@ -32,13 +32,15 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
 
   const options = {
     scales: {
-      yAxes: [
-        {
-          ticks: {
-            beginAtZero: true,
-          },
+      x: {
+        type: "category", // Specify the scale type as "category" for the x-axis
+        beginAtZero: true,
+      },
+      y: {
+        ticks: {
+          beginAtZero: true,
         },
-      ],
+      },
     },
   };
 
