@@ -18,7 +18,7 @@ import {
   useGetCryptoDetailsQuery,
   useGetCryptoHistoryQuery,
 } from "../services/CryptoApi";
-// import LineChart from "./LineChart";
+import LineChart from "./LineChart";
 
 
 const { Title, Text } = Typography;
@@ -127,11 +127,11 @@ const CryptoDetails = () => {
           <Option key={date}>{date}</Option>
         ))}
       </Select>
-      {/* <LineChart
+      <LineChart
         coinHistory={coinHistory}
         currentPrice={millify(cryptoDetails?.price)}
         coinName={cryptoDetails?.name}
-      /> */}
+      />
       <Col className="stats-container">
         <Col className="coin-value-statistics">
           <Col className="coin-value-statistics-heading">
