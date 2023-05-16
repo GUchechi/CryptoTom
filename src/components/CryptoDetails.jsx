@@ -22,6 +22,7 @@ const CryptoDetails = () => {
   const [timeperiod, setTimeperiod] = useState("7d");
   const { coinId } = useParams();
   const { data, isFetching } = useGetCryptoDetailsQuery(coinId);
+  
   const cryptoDetails = data?.data?.coin;
 
   const time = ["3h", "24h", "7d", "30d", "1y", "3m", "3y", "5y"];
@@ -96,7 +97,7 @@ const CryptoDetails = () => {
     <Col className="coin-detail-container">
       <Col className="coin-heading-container">
         <Title level={2} className="coin-name">
-          {data?.data?.coin.name} ({data?.data?.coin.symbol}) Price
+          {cryptoDetails.name} ({cryptoDetails.slug}) Price
         </Title>
         <p>
           {cryptoDetails.name} live price in US Dollar (USD). View value
