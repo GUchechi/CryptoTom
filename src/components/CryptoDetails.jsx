@@ -21,7 +21,7 @@ const { Option } = Select;
 const CryptoDetails = () => {
 const {coinId} = useParams()
 
-  return <div>CryptoDetails</div>;
+  return <div>CryptoDetails {coinId}</div>;
 };
 
 export default CryptoDetails;
