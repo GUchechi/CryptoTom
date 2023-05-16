@@ -22,7 +22,7 @@ const CryptoDetails = () => {
   const [timeperiod, setTimeperiod] = useState("7d");
   const { coinId } = useParams();
   const { data, isFetching } = useGetCryptoDetailsQuery(coinId);
-  
+
   const cryptoDetails = data?.data?.coin;
 
   const time = ["3h", "24h", "7d", "30d", "1y", "3m", "3y", "5y"];
@@ -68,7 +68,7 @@ const CryptoDetails = () => {
       icon: <MoneyCollectOutlined />,
     },
     {
-      title: "Aprroved Supply",
+      title: "Approved Supply",
       value: cryptoDetails?.supply?.confirmed ? (
         <CheckOutlined />
       ) : (
@@ -104,6 +104,17 @@ const CryptoDetails = () => {
           statistics, market cap and supply.
         </p>
       </Col>
+      <Select
+        defaultValue="7d"
+        className="select-timeperiod"
+        placeholder="Select Timeperiod"
+        onChange={(value) => setTimeperiod(value)}
+      >
+        {time.map((date) => (
+          <Option key={date}>{date}</Option>
+        ))}
+      </Select>
+      {/* Line chart */}
     </Col>
   );
 };
