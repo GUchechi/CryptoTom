@@ -97,7 +97,7 @@ const CryptoDetails = () => {
     <Col className="coin-detail-container">
       <Col className="coin-heading-container">
         <Title level={2} className="coin-name">
-          {cryptoDetails.name} ({cryptoDetails.slug}) Price
+          {cryptoDetails.name} ({cryptoDetails.symbol}) Price
         </Title>
         <p>
           {cryptoDetails.name} live price in US Dollar (USD). View value
@@ -115,6 +115,20 @@ const CryptoDetails = () => {
         ))}
       </Select>
       {/* Line chart */}
+      <Col className="stats-container">
+        <Col className="coin-value-statistics">
+          <Col className="coin-value-statistics-heading">
+            <Title level={3} className="coin-details-heading">
+              {cryptoDetails.name} Value Statistics
+            </Title>
+            <p>
+              An overview showing the statistics of {cryptoDetails.name}, such
+              as the base and quote currency, the rank, and trading volume.
+            </p>
+          </Col>
+          
+        </Col>
+      </Col>
     </Col>
   );
 };
