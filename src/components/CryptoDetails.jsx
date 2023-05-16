@@ -126,7 +126,15 @@ const CryptoDetails = () => {
               as the base and quote currency, the rank, and trading volume.
             </p>
           </Col>
-          
+          {stats.map(({ icon, title, value }) => (
+            <Col className="coin-stats">
+              <Col className="coin-stats-name">
+                <Text>{icon}</Text>
+                <Text>{title}</Text>
+              </Col>
+              <Text className="stats">{value}</Text>
+            </Col>
+          ))}
         </Col>
       </Col>
     </Col>
