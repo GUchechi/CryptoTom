@@ -43,7 +43,9 @@ const CryptoDetails = () => {
   ];
 
 
-  return <div>CryptoDetails {coinId}</div>;
+  return <Col className="coin-detail-container">
+  
+  </Col>;
 };
 
 export default CryptoDetails;
