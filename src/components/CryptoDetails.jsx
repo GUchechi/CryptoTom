@@ -19,7 +19,9 @@ const { Title, Text } = Typography;
 const { Option } = Select;
 
 const CryptoDetails = () => {
-const {coinId} = useParams()
+  const { coinId } = useParams();
+
+  console.log("coinId:", coinId);
 
   return <div>CryptoDetails {coinId}</div>;
 };
