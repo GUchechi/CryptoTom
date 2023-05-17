@@ -6,7 +6,7 @@ import Cryptocurrencies from '../components/CryptoCurrencies'
 import News from '../components/News'
 import Loader from "./Loader";
 
-const { Title } = Typography;
+const { Title } = Typography; 
 
 const HomePage = () => {
   const { data, isFetching } = useGetCryptosQuery(10);

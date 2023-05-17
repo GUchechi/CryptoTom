@@ -11,6 +11,7 @@ const CryptoCurrencies = ({ simplified }) => {
   const [cryptos, setCryptos] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
+  // 
   useEffect(() => {
     setCryptos(cryptosList?.data?.coins);
 
