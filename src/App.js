@@ -3,7 +3,6 @@ import { Layout, Typography, Space } from "antd";
 import {
   Navbar,
   HomePage,
-  Exchanges,
   CryptoCurrencies,
   CryptoDetails,
   News,
