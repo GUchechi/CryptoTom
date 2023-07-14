@@ -32,8 +32,8 @@ function App() {
             level={5}
             style={{ color: "white", textAlign: "center" }}
           >
-            Copyright © 2023
-            <Link to="/"> CryptoTom Inc.</Link> <br />
+            Copyright © 2023 {"\u00A0"}
+             <Link to="/">Godswill's CryptoTom Inc.</Link> <br />
             All Rights Reserved.
           </Typography.Title>
           <Space>
